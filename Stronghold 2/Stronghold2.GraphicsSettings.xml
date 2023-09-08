@@ -1,0 +1,29 @@
+<graphicssettings>
+	<resolution width="1920" height="1080" format="X8R8G8B8" refreshRate="60"/>
+	<multiSamples value="3"/>
+	<Ansiotropy value="4"/>
+	<drawDistance value="1.000000"/>
+	<nPatchLevel value="0.000000"/>
+	<levelOfDetail value="1.000000"/>
+	<modelDetail value="2"/>
+	<textureDetail value="1"/>
+	<drawGroundShadows enabled="true"/>
+	<bloomEnabled enabled="true"/>
+	<drawRealTimeShadows enabled="true"/>
+	<drawReflections enabled="true"/>
+	<drawArrowTrails enabled="false"/>
+	<drawParticles enabled="true"/>
+	<drawGrass enabled="true"/>
+	<earlyCulling enabled="false"/>
+	<enhancedWater enabled="true"/>
+	<normalMaps enabled="true"/>
+	<multipassShaders enabled="false"/>
+	<settingsDialog enabled="true"/>
+	<shaderVersion value="3.0"/>
+	<gfxLevel value="4"/>
+	<cloudShadow enabled="true"/>
+	<particleLevel value="2"/>
+	<snow enabled="true"/>
+	<waterSetting value="2"/>
+	<windowed enabled="false"/>
+</graphicssettings>

@@ -1,0 +1,213 @@
+<style>
+    .course-unit-table {
+        position: absolute;
+        top: 51.5mm;
+        left: 12mm;
+        width: 194mm;
+
+    }
+
+    .course-unit-table-col1 {
+        width: 154mm;
+    }
+
+    .course-unit-table-col2 {
+        width: 40mm;
+    }
+
+    .rector-signature {
+        position: absolute;
+        top: 249.5mm;
+        left: 166mm;
+    }
+
+    .page-num-total {
+        position: absolute;
+        top: 275mm;
+        left: 57mm;
+    }
+
+    .page-num-4 {
+        position: absolute;
+        top: 286.5mm;
+        left: 26mm;
+    }
+
+
+    .font-normal {
+        font-size: 16px;
+    }
+
+    .org-fullname {
+        position: absolute;
+        left: 210mm;
+        top: 94mm;
+        width: 60mm;
+        word-break: break-word;
+        text-align: center;
+    }
+
+    .city {
+        position: absolute;
+        left: 210mm;
+        top: 119mm;
+        width: 60mm;
+        text-align: center;
+    }
+
+    .prof-education {
+        position: absolute;
+        left: 210mm;
+        top: 184mm;
+        width: 60mm;
+        text-align: center;
+        word-break: break-word;
+    }
+
+    .doc-number {
+        position: absolute;
+        left: 210mm;
+        top: 211mm;
+        width: 60mm;
+        text-align: center;
+    }
+
+    .custom-field {
+        position: absolute;
+        left: 210mm;
+        top: 239mm;
+        width: 60mm;
+        text-align: center;
+    }
+
+    .surname {
+        position: absolute;
+        left: 315mm;
+        top: 57mm;
+        text-align: left;
+    }
+
+    .name {
+        position: absolute;
+        left: 315mm;
+        top: 76mm;
+        text-align: left;
+    }
+
+    .middlename {
+        position: absolute;
+        left: 315mm;
+        top: 95mm;
+        text-align: left;
+    }
+
+    .birthday {
+        position: absolute;
+        left: 315mm;
+        top: 114mm;
+        text-align: left;
+    }
+
+    .user-prev-education {
+        position: absolute;
+        left: 280mm;
+        top: 145mm;
+    }
+
+    .user-term-of-study {
+        position: absolute;
+        left: 305mm;
+        top: 211mm;
+    }
+
+    .course-qualification {
+        position: absolute;
+        left: 305mm;
+        top: 233mm;
+    }
+
+    .course-classifier-1 {
+        position: absolute;
+        left: 305mm;
+        top: 242mm;
+    }
+
+    .course-classifier-2 {
+        position: absolute;
+        left: 285mm;
+        top: 252mm;
+        text-align: center;
+        word-break: break-word;
+        width: 60mm;
+    }
+
+    .pagenum-right {
+        position: absolute;
+        left: 412mm;
+        top: 287mm;
+    }
+</style>
+
+<!-- Таблица наименования курсовых проектов -->
+<table class="course-unit-table" border="1">
+    <tr>
+        <td class="course-unit-table-col1 left font-normal">
+            <div class="col-left-text">{course_unit_name} {course_unit_work}</div>
+        </td>
+        <td class="col-left-2 center font-normal" style="text-align: center">{course_unit_grade}</td>
+    </tr>
+</table>
+
+<!-- Директор -->
+<div class="rector-signature font-normal">{org_director_name|short}</div>
+
+<!-- Общее количество страниц -->
+<div class="page-num-total font-normal">4</div>
+
+<!-- Номер страницы -->
+<div class="page-num-4 font-normal">4</div>
+
+<!-- Название организации -->
+<div class="org-fullname font-normal">{org_fullname}</div>
+
+<!-- Город -->
+<div class="city font-normal">г.Тверь</div>
+
+<!-- О среднем проффесиональном -->
+<div class="prof-education font-normal">о среднем проффесиональном образовании</div>
+
+<!-- Регистрационный номер -->
+<div class="doc-number font-normal">{doc_number}</div>
+
+<!-- год? -->
+<div class="custom-field font-normal">{custom_fielвыдаd|Дата чи|date|long} года</div>
+
+<!-- Фамилия -->
+<div class="surname font-normal">{user_name|last}</div>
+
+<!-- Имя -->
+<div class="name font-normal">{user_name|first}</div>
+
+<!-- Отчество -->
+<div class="middlename font-normal">{user_name|middle}</div>
+
+<!-- Дата рождения -->
+<div class="birthday font-normal">{user_birthdate|long}</div>
+
+<!-- Дата выдачи -->
+<div class="user-prev-education font-normal">{user_prev_education_doc}, {user_prev_education_at|year} года</div>
+
+<!-- Срок освоения -->
+<div class="user-term-of-study font-normal">{user_term_of_study}</div>
+
+<!-- Квалификация -->
+<div class="course-qualification font-normal">{course_qualification}</div>
+
+<!--  -->
+<div class="course-classifier-1 font-normal">специальности</div>
+
+<!-- по -->
+<div class="course-classifier-2 font-normal">{course_classifier_code} {course_classifier_name}</div>
+
+<!-- Носер страницы -->
+<div class="pagenum-right">1</div>

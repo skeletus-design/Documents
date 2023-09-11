@@ -93,11 +93,12 @@ class App:
         self.window.geometry('600x600')
         self.window.configure(bg="blue")
         self.window.resizable('False','False')
-        self.lb()
-        self.buttons()
-        self.tree()
-        self.insert()
+        self.lb() #лебл
+        self.buttons() #кнопки
+        self.tree() #дерево
+        self.insert() #добавление в начальную таблицу
     
+    #Дерево таблицы
     def tree(self):
         self.my_tree = ttk.Treeview(self.window, columns=('id', 'col1', 'col2', 'col3'), show='headings')
         self.my_tree.column("id", width=90)
@@ -106,12 +107,14 @@ class App:
         self.my_tree.column("col3", width=90)
         self.my_tree.grid(column=0, row=0)
         self.SQL_Connect()
-
+        
+    #Лейбл
     def lb(self):
         self.lb = Label(self.window, text="текст", font="bald 30")
         self.lb.configure(bg="blue") 
         self.lb.place(x=100, y=500)
 
+    #Функция кнопок добавить и удалить
     def buttons(self):
         self.bt1 = ttk.Button(text="Добавить", command=self.add)
         self.bt1.place(x=100,y=450)

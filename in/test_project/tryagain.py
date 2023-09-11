@@ -16,26 +16,29 @@ class App:
                 password="4444",
                 database="test",
             )
-            #Курсор, выбирающий
+            #Курсор, выбирающий данные из таблицы с помощью запроса
             cur = self.Con.cursor()
             cur.execute("select * from new_table")
             self.result = cur.fetchall()
-            cur.close()
+            cur.close() #Важно, что перед открытием следующего курсора, необходимо закрывать текущий, чтобы это не вызывало ошибок
 
         except:
-            messagebox.showerror("","Error")
-            
+            messagebox.showerror("","Error")#Чисто косметический messagebox, который просто показывает ошибку подключения, в случае если та возникла
+    
+    #Функция очищает дерево таблицу от текущих данных
     def clear(self):
         for i in self.my_tree.get_children():
             self.my_tree.delete(i)
-            
+    
+    #Функция обновляет таблицу актуальными в момент запроса данными из БД       
     def update(self):
         cur = self.Con.cursor()
         cur.execute("select * from new_table")
         self.result = cur.fetchall()
         cur.close()
         [self.my_tree.insert('', 'end', values=row) for row in self.result]
-            
+    
+    #Функция открывает новое окно для добавления данных в бд        
     def add(self):
         self.icon = Tk()
         self.icon.geometry('600x250')
@@ -59,18 +62,19 @@ class App:
         
         
         self.icon.mainloop()
-        
+    
+    #Функция добавляет вписанные в предыдущем окне данные в таблицу    
     def add_this(self):
         cur = self.Con.cursor()
         cur.execute(f"INSERT INTO new_table (col, col2, col3) VALUES ('{self.ent2.get()}','{self.ent3.get()}','{self.ent4.get()}');")
         self.Con.commit()
-        cur.close()
-        self.icon.destroy()
-        self.clear()
-        self.update()
+        cur.close()#закрытие курсора
+        self.icon.destroy()#закрытие окна функции add
+        self.clear()#очищение данных дерева
+        self.update()#обновление данных дерева
         
         
-        
+    #По схожей логике работает функция для обновления данных    
     def delete(self):
         cur = self.Con.cursor()
         cur.execute(f"delete from new_table where id={self.my_tree.set(self.my_tree.selection(), '#1')};")
@@ -79,10 +83,11 @@ class App:
         self.clear()
         self.update()
         
-    
+    #Функция внесения данных в таблицу дерева
     def insert(self):
         [self.my_tree.insert('', 'end', values=row) for row in self.result]
     
+    #Открытие основного окна, она вызывается первой, следущие функции в основном работают по очереди как каскад
     def main(self):
         self.window = Tk()
         self.window.geometry('600x600')

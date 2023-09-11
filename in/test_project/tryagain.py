@@ -6,6 +6,7 @@ from tkinter import messagebox
 class App:
     Con = None
 
+    #Функция создает подключение к локальной бд
     def SQL_Connect(self):
         try:
             self.Con = pymysql.connect(
@@ -15,7 +16,7 @@ class App:
                 password="4444",
                 database="test",
             )
-            
+            #Курсор, выбирающий
             cur = self.Con.cursor()
             cur.execute("select * from new_table")
             self.result = cur.fetchall()
@@ -85,6 +86,7 @@ class App:
     def main(self):
         self.window = Tk()
         self.window.geometry('600x600')
+        self.window.configure(bg="blue")
         self.window.resizable('False','False')
         self.lb()
         self.buttons()
@@ -93,24 +95,27 @@ class App:
     
     def tree(self):
         self.my_tree = ttk.Treeview(self.window, columns=('id', 'col1', 'col2', 'col3'), show='headings')
-        self.my_tree.column("id", width=70)
-        self.my_tree.column("col1", width=70)
-        self.my_tree.column("col2", width=70)
-        self.my_tree.column("col3", width=70)
+        self.my_tree.column("id", width=90)
+        self.my_tree.column("col1", width=90)
+        self.my_tree.column("col2", width=90)
+        self.my_tree.column("col3", width=90)
         self.my_tree.grid(column=0, row=0)
         self.SQL_Connect()
 
     def lb(self):
-        self.lb = Label(self.window, text="текст", font="bald 30") 
+        self.lb = Label(self.window, text="текст", font="bald 30")
+        self.lb.configure(bg="blue") 
         self.lb.place(x=100, y=500)
 
     def buttons(self):
         self.bt1 = ttk.Button(text="Добавить", command=self.add)
         self.bt1.place(x=100,y=450)
         self.bt2 = ttk.Button(text="Удалить", command=self.delete)
-        self.bt2.place(x=170, y=450)
-        self.bt3 = ttk.Button(text="test", command=self.update)
-        self.bt3.place(x=270, y=450)
+        self.bt2.place(x=180, y=450)
+        
+    def login(self):
+        self.login_window = Tk()
+        self.login_window.geometry('200x600')
 
 if __name__ == "__main__":
     app = App()
@@ -118,4 +123,5 @@ if __name__ == "__main__":
     app.main()
 
     app.window.mainloop()
+
 

@@ -1,0 +1,14 @@
+C:\Users\nikit\Documents\in\test_project\bin\Debug\net7.0\test_project.exe
+C:\Users\nikit\Documents\in\test_project\bin\Debug\net7.0\test_project.deps.json
+C:\Users\nikit\Documents\in\test_project\bin\Debug\net7.0\test_project.runtimeconfig.json
+C:\Users\nikit\Documents\in\test_project\bin\Debug\net7.0\test_project.dll
+C:\Users\nikit\Documents\in\test_project\bin\Debug\net7.0\test_project.pdb
+C:\Users\nikit\Documents\in\test_project\obj\Debug\net7.0\test_project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nikit\Documents\in\test_project\obj\Debug\net7.0\test_project.AssemblyInfoInputs.cache
+C:\Users\nikit\Documents\in\test_project\obj\Debug\net7.0\test_project.AssemblyInfo.cs
+C:\Users\nikit\Documents\in\test_project\obj\Debug\net7.0\test_project.csproj.CoreCompileInputs.cache
+C:\Users\nikit\Documents\in\test_project\obj\Debug\net7.0\test_project.dll
+C:\Users\nikit\Documents\in\test_project\obj\Debug\net7.0\refint\test_project.dll
+C:\Users\nikit\Documents\in\test_project\obj\Debug\net7.0\test_project.pdb
+C:\Users\nikit\Documents\in\test_project\obj\Debug\net7.0\test_project.genruntimeconfig.cache
+C:\Users\nikit\Documents\in\test_project\obj\Debug\net7.0\ref\test_project.dll

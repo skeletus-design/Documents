@@ -2,6 +2,7 @@ import pymysql
 from tkinter import *
 from tkinter import ttk
 from tkinter import messagebox
+from flask import Flask, request, redirect, url_for, render_template
 
 class App:
     Con = None
@@ -98,6 +99,7 @@ class App:
     def main(self):
         self.window = Tk()
         self.window.geometry('600x400')
+        self.window.title('Редактор')
         self.window.configure(bg="#FFFFE0")
         self.window.resizable('False','False')
         self.lb() #лебл
@@ -129,10 +131,6 @@ class App:
         self.bt1.place(x=100,y=350)
         self.bt2 = ttk.Button(text="Удалить", command=self.delete)
         self.bt2.place(x=180, y=350)
-        
-    def login(self):
-        self.login_window = Tk()
-        self.login_window.geometry('200x600')
 
 if __name__ == "__main__":
     app = App()

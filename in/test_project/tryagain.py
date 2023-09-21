@@ -2,11 +2,27 @@ import pymysql
 from tkinter import *
 from tkinter import ttk
 from tkinter import messagebox
-from flask import Flask, request, redirect, url_for, render_template
+#from flask import Flask, request, redirect, url_for, render_template
 
 class App:
     Con = None
 
+    def SQL_login(self):
+        try:
+            self.Conn = pymysql.connect(
+                host="localhost",
+                port=3306,
+                user="root",
+                password="4444",
+                database="test",
+            )
+            curr = self.Conn.cursor()
+            curr.execute("select * from login")
+            curr.res = curr.fetchall()
+            curr.close()
+        except:
+            messagebox.showerror("","Error")                   
+        
     #Функция создает подключение к локальной бд
     def SQL_Connect(self):
         try:
@@ -131,11 +147,19 @@ class App:
         self.bt1.place(x=100,y=350)
         self.bt2 = ttk.Button(text="Удалить", command=self.delete)
         self.bt2.place(x=180, y=350)
-
+        
+    def login(self):
+        self.login1 = Tk()
+        self.login1.geometry('200x250')
+        self.login1.title()
+        
+        self.SQL_login
+        
+                
 if __name__ == "__main__":
     app = App()
     
-    app.main()
+    app.login() 
 
-    app.window.mainloop()
+    app.login1.mainloop()
 

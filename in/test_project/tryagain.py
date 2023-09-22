@@ -18,8 +18,13 @@ class App:
             )
             curr = self.Conn.cursor()
             curr.execute("select * from login")
-            curr.res = curr.fetchall()
+            self.ress = curr.fetchall()
             curr.close()
+            
+            self.keys = self.ress
+            
+            
+            
         except:
             messagebox.showerror("","Error")                   
         
@@ -38,7 +43,6 @@ class App:
             cur.execute("select * from new_table")
             self.result = cur.fetchall()
             cur.close() #Важно, что перед открытием следующего курсора, необходимо закрывать текущий, чтобы это не вызывало ошибок
-
         except:
             messagebox.showerror("","Error")#Чисто косметический messagebox, который просто показывает ошибку подключения, в случае если та возникла
     
@@ -122,6 +126,8 @@ class App:
         self.buttons() #кнопки
         self.tree() #дерево
         self.insert() #добавление в начальную таблицу
+        
+        self.SQL_Connect
     
     #Дерево таблицы
     def tree(self):
@@ -149,17 +155,49 @@ class App:
         self.bt2.place(x=180, y=350)
         
     def login(self):
+        #Окно формы авторизации
         self.login1 = Tk()
-        self.login1.geometry('200x250')
+        self.login1.geometry('300x250')
+        self.login1.resizable('False','False')
         self.login1.title()
         
-        self.SQL_login
+        #Поле ввода для логина
+        self.entry1 = ttk.Entry(self.login1)
+        self.entry1.pack(anchor=NW, pady=5)
+        self.entry1.get()
+        self.login_label = ttk.Label(self.login1, text="Логин")
+        self.login_label.place(x=140, y=5)
         
-                
+        #Поле ввода пароля
+        self.entry2 = ttk.Entry(self.login1)
+        self.entry2.pack(anchor=NW, pady=20)
+        self.entry2.get()
+        self.password_label = ttk.Label(self.login1, text="Пароль")
+        self.password_label.place(x=140, y=50)
+        
+        self.ab = ttk.Button(self.login1, text="Авторизоваться", command=self.login_try)
+        self.ab.place(x=140, y=200)
+        
+        self.SQL_login()
+    
+    def login_try(self):
+        self.login_ = 'admin'
+        self.password = 'admin'
+    
+        if  self.login_ == self.entry1.get() and self.entry2.get():
+            self.login1.destroy()
+            self.main()
+            
+        else:
+            messagebox.showerror("","Error")
+            
+                    
 if __name__ == "__main__":
     app = App()
     
     app.login() 
 
     app.login1.mainloop()
+    
 
+((1, 'admin', 'admin'),)

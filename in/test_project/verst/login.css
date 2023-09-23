@@ -8,16 +8,20 @@ section {
     align-items: center;
     min-height: 100vh;
     width: 100%;
-    background: rgb(0, 0, 110);
+    background: url('Bg_login.jpg');
 }
 .form-box {
     position: relative;
     width: 400px;
     height: 450px;
-    background: green;
+    background: #ff00e16b;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 25px;
+    border: 2px solid #fff;
+    border-bottom: 5px solid #c0c0c0;
+    border-right: 5px solid #c0c0c0;
 }
 h2{
     font-size: 2em;
@@ -32,6 +36,8 @@ h2{
 }
 .inputbox label{
     position: absolute;
+    color: #fff;
+    font-size: 1.2em;
     top: 50%;
     left: 5px;
     transform: translateY(-50%);
@@ -88,4 +94,9 @@ button {
     cursor: pointer;
     font-size: 1em;
     font-weight: 600;
+    transition: .5s;
+}
+button:hover{
+    background: #818181;
+    color: white;
 }

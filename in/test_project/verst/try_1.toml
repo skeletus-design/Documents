@@ -1,1 +1,1 @@
-packages = ["pymysql"]
+packages = ["pymysql", "selenium"]

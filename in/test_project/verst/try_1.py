@@ -1,4 +1,5 @@
 import pymysql
+from selenium import webdriver
 
 class App:
     Con = None
@@ -15,6 +16,13 @@ class App:
             print('Connect')
         except:
             print('Allert')
+            
+    def Selenium(self):
+        try:
+            driver = webdriver.Chrome()
+            driver.get("login.html")
+        except:
+            print("err")
             
             
 if __name__ == "__main__":

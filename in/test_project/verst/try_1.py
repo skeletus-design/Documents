@@ -14,7 +14,10 @@ class App:
             )
             print('Connect')
         except:
-            print('Allert')  
+            print('Allert')
+            
+    def login(self):
+        
             
 if __name__ == "__main__":
     app = App()

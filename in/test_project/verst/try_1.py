@@ -16,8 +16,6 @@ class App:
         except:
             print('Allert')
             
-    def login(self):
-        
             
 if __name__ == "__main__":
     app = App()

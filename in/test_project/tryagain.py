@@ -184,7 +184,8 @@ class App:
         self.login_ = 'admin'
         self.password = 'admin'
     
-        if  self.login_ == self.entry1.get() and self.entry2.get():
+        if  self.ress == (f"'1', '{self.entry1.get()}', '{self.entry2.get()}'"):
+        #self.login_ == self.entry1.get() and self.entry2.get():
             self.login1.destroy()
             self.main()
             

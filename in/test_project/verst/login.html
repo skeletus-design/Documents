@@ -1,6 +1,4 @@
 <html>
-    <script type="py" src="./main.py" config="./pyscript.toml"></script>
-
 <head>
     <title>Trella - Login</title>
     <link rel="stylesheet" href="login.css">
@@ -13,16 +11,19 @@
                 <form action="">
                     <h2>Войти</h2>
                     <div class="inputbox">
+                        <!-- Поле для ввода имя пользователя -->
                         <ion-icon name="person-circle-outline"></ion-icon>
                         <input type="text" required>
                         <label for="">Username</label>
                     </div>
                     <div class="inputbox">
+                        <!-- Поле для ввода почты -->
                         <ion-icon name="mail-outline"></ion-icon>
                         <input type="email" required>
                         <label for="">Email</label>
                     </div>
                     <div class="inputbox">
+                        <!-- Поле для ввода пароля -->
                         <ion-icon name="lock-closed-outline"></ion-icon>
                         <input type="password" required>
                         <label for="">Password</label>
@@ -30,6 +31,7 @@
                     <!-- <div class="forget">
                         <label for=""><input type="checkbox">Remember me</label>
                     </div> -->
+                    <button>Войти</button>
                     <div class="register">
                         <p>Если у вас нет аккаунта <a href="#">Регистрация</a></p>
                     </div>

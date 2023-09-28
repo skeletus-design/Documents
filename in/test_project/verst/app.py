@@ -2,26 +2,19 @@ import pymysql
 from flask import Flask, render_template, url_for
 
 
-    
-def SQL_Connect():
-    try:
-        Con = pymysql.connect(
-            host="localhost",
-            port=3306,
-            user="root",
-            password="4444",
-            database="team",
-        )
-        print('Connect')
-    except:
-        print('Allert')
+bd = pymysql.connect("localhost", "root", "4444", "team")
 
 app = Flask(__name__)
+api = Api(app)
+
 
 @app.route('/')
 @app.route('/login')
 def index():
     return render_template("login.html")
+def Name():
+    cursor = bd.cursor()
+    sql = "SELECT * FROM "
 
 
 @app.route('/reg')

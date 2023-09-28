@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>Trella - Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+
+<body background="{{ url_for('static', filename='img/Bg_login.jpg')}}">
+
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form action="">
+                    <h2>Войти</h2>
+                    <div class="inputbox">
+                        <!-- Поле для ввода имя пользователя -->
+                        <ion-icon name="person-circle-outline"></ion-icon>
+                        <input type="text1" required>
+                        <label for="">Имя пользователя</label>
+                    </div>
+                    <div class="inputbox">
+                        <!-- Поле для ввода почты -->
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email1" required>
+                        <label for="">Почта</label>
+                    </div>
+                    <div class="inputbox">
+                        <!-- Поле для ввода пароля -->
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password1" required>
+                        <label for="">Пароль</label>
+                    </div>
+                    <!-- <div class="forget">
+                        <label for=""><input type="checkbox">Remember me</label>
+                    </div> -->
+                    <button>Войти</button>
+                    <div class="register">
+                        <p>Если у вас нет аккаунта <a href="#">Регистрация</a></p>
+                    </div>
+                </form>
+                </div>
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

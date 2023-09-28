@@ -1,5 +1,5 @@
 import pymysql
-from selenium import webdriver
+from flask import Flask, render_template, request 
 
 class App:
     Con = None
@@ -17,12 +17,12 @@ class App:
         except:
             print('Allert')
             
-    def Selenium(self):
+    def home(self):
         try:
-            driver = webdriver.Chrome()
-            driver.get("login.html")
+            return render_template("login.html")
+            
         except:
-            print("err")
+            print("error_flask")
             
             
 if __name__ == "__main__":

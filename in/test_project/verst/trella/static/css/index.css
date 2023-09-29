@@ -1,0 +1,254 @@
+* { margin: 0; }
+body{
+    overflow: hidden;
+}
+.images {
+    max-width: 100%;
+}
+/* HEADER */
+.header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 105px;
+    width: 100%;
+    background: red;
+}
+.headerButtons{
+    position: relative;
+    width: 99%;
+    height: 95px;
+    background: purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: 0 10px 0 10px;
+    height: 93px;
+    background: grey; 
+    border-right: 1.5px solid #fff;
+    justify-content: center;
+    align-items: center;
+}
+.buttonConn1{
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 10px 0 10px;
+    min-width: 125px;
+    max-width: 300px;
+    width: 300px;
+    height: 93px;
+    background: blue;
+    border-left: 1.5px solid #fff;
+    border-right: 1.5px solid #fff;
+    justify-content: center;
+    align-items: center;
+}
+.buttonConn1 a{
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-decoration: none;
+}
+.buttonConn2{
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 10px 0 10px;
+    min-width: 125px;
+    max-width: 300px;
+    width: 300px;
+    height: 93px;
+    background: green;
+    border-left: 1.5px solid #fff;
+    border-right: 1.5px solid #fff;
+    justify-content: center;
+    align-items: center;
+}
+.buttonConn2 a{
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-decoration: none;
+}
+.buttonConn3{
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 10px 0 10px;
+    min-width: 125px;
+    max-width: 300px;
+    width: 300px;
+    height: 93px;
+    background: black;
+    border-left: 1.5px solid #fff;
+    border-right: 1.5px solid #fff;
+    justify-content: center;
+    align-items: center;
+}
+.buttonConn3 a{
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-decoration: none;
+}
+.profileConn{
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 10px 0 10px;
+    width: 93px;
+    height: 93px;
+    background: pink;
+    border-left: 1.5px solid #fff;
+    justify-content: center;
+    align-items: center;
+    right: 1%;
+}
+.profileConn ion-icon{
+    margin-bottom: 15px;
+    margin-right: auto;
+    padding: 4px;
+    color: #fff;
+    font-size: 2.5em;
+    border: 2px solid #fff;
+    border-radius: 30px;
+}
+.profileConn label{
+    position: absolute;
+    color: #fff;
+    font-weight: 600;
+    top: 70%;
+}
+/* LEFT BAR */
+.frame{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 90.15%;
+    background: rgb(92, 60, 0);
+}
+.mainWindow{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: url(/Images/Bg_1.png);
+}
+.leftBar {
+    position: absolute;
+    display: flex;
+    width: 175px;
+    height: 100%;
+    left: 0%;
+    background: rgb(103, 0, 0);
+    justify-content: center;
+    align-items: center;
+}
+.leftButtons{
+    position: relative;
+    display: flex;
+    width: 165px;
+    height: 99%;
+    background: purple;
+    justify-content: center;
+}
+.form1{
+    position: absolute;
+    display: flex;
+    top: 20%;
+    left: 50%;
+    width: 350px;
+    height: 500px;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+.headerForm{
+    position: absolute;
+    display: flex;
+    top: 0%;
+    width: 100%;
+    height: 35px;
+    background: #c0c0c0;
+    justify-content: center;
+    align-items: center ;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.headerForm input{
+    width: 125px;
+    text-align: center;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    background: transparent;
+    color: #fff;
+}
+.headerForm input:hover{
+    border-bottom: 1.7px solid #fff;
+}
+.deleteBord{
+    position: absolute;
+    width: 35px;
+    height: 20px;
+    right: 3%;
+    background: #f3f3f3;
+    cursor: pointer;
+    border-radius: 15px;
+    border: none;
+    transition: .5s;
+}
+.headerForm ion-icon{
+    color: #000;
+    font-weight: 600;
+    transition: .5s;
+}
+.deleteBord:hover{
+    background: #707070;
+}
+.labelForm{
+    position: absolute;
+    bottom: 0%;
+    display: flex;
+    width: 100%;
+    height: 465px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.addString{
+    position: absolute;
+    width: 150px;
+    height: 25px;
+    top: 3%;
+    left: 3%;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+    background: #c0c0c0;
+    border: none;
+    border-radius: 15px;
+    transition: .5s;
+}
+.addString:hover{
+    background: #878787;
+    color: #fff;
+}

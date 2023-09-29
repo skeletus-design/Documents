@@ -11,24 +11,19 @@
     <section>
         <div class="form-box">
             <div class="form-value">
-                <form action="/try_1.py" method="get">
+                <form action="/sign_in" method="POST">
+                    {% csrf_token %}
                     <h2>Войти</h2>
                     <div class="inputbox">
                         <!-- Поле для ввода имя пользователя -->
                         <ion-icon name="person-circle-outline"></ion-icon>
-                        <input type="text1" required>
+                        <input type="text1" name='username' required>
                         <label for="">Имя пользователя</label>
-                    </div>
-                    <div class="inputbox">
-                        <!-- Поле для ввода почты -->
-                        <ion-icon name="mail-outline"></ion-icon>
-                        <input type="email1" required>
-                        <label for="">Почта</label>
                     </div>
                     <div class="inputbox">
                         <!-- Поле для ввода пароля -->
                         <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input type="password1" required>
+                        <input type="password1" name='password' required>
                         <label for="">Пароль</label>
                     </div>
                     <!-- <div class="forget">
@@ -36,7 +31,7 @@
                     </div> -->
                     <button>Войти</button>
                     <div class="register">
-                        <p>Если у вас нет аккаунта <a href="#">Регистрация</a></p>
+                        <p>Если у вас нет аккаунта <a href="{% url "register" %}">Регистрация</a></p>
                     </div>
                 </form>
                 </div>

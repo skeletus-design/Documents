@@ -1,0 +1,60 @@
+{% load static %}
+
+<html>
+<head>
+    <link rel="shortcut icon" href="]{% static 'img/Logo.png' %}" />
+    <title>Trella - Workplace</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <!-- Кодировка страницы -->
+    <meta http-equiv="Content-type" content="text/html; charset=URF-8">
+</head> 
+<body bgcolor="black">
+    <div class="header">
+        <!-- Верхняя панель -->
+        <div class="headerButtons">
+            <div class="logo">
+                <!-- Ссылка на главную страницу в виде лого -->
+                <a href="index.html"><img src="/Images/Icons/Logo.png"></a>
+            </div>
+            <div class="buttonConn1">
+                <a href="index.html">Кнопка 1</a>
+            </div>
+            <div class="buttonConn2">
+                <a href="#">Кнопка 2</a>
+            </div>
+            <div class="buttonConn3">
+                <a href="#">Кнопка 3</a>
+            </div>
+            <div class="profileConn">
+                <!-- Кнопка профиля -->
+                <a href="#"><ion-icon name="person-outline"></ion-icon></a>
+                <label for="">Профиль</label>
+            </div>
+        </div>
+    </div>
+    <div class="frame">
+        <!-- Основное окно -->
+        <div class="mainWindow">
+            <div class="form1">
+                <div class="headerForm">
+                    <input type="text" required value="Новая доска" maxlength="20">
+                    <button class="deleteBord"><ion-icon name="remove-outline"></ion-icon></button>
+                </div>
+                <div class="labelForm">
+                    <button class="addString">+ Добавить строку</button>
+                </div>
+            </div>
+        </div>
+        <div class="leftBar">
+            <div class="leftButtons">
+                <!-- Левая панель -->
+                <div class="strings">
+                    <button>+ Добавить доску</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
+</html>
